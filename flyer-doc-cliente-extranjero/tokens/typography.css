@@ -1,0 +1,66 @@
+/* ============================================================
+   SOLETTA · Typography tokens
+   Brand guide: Saudagar (titulares) + Barlow (párrafos).
+   Saudagar is the official brand display serif (self-hosted .otf).
+   Voice: "autoridad serena" — character in headlines,
+   neutral criterion in text. Heavy use of wide-tracked
+   uppercase for eyebrows/labels (a core brand motif).
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Saudagar', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Barlow', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-body:    var(--font-sans);
+
+  /* ---- Weights ---- */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ---- Type scale (rem; 1rem = 16px) ---- */
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.875rem;  /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-lg:   1.125rem;  /* 18 */
+  --text-xl:   1.25rem;   /* 20 */
+  --text-2xl:  1.5rem;    /* 24 */
+  --text-3xl:  1.875rem;  /* 30 */
+  --text-4xl:  2.375rem;  /* 38 */
+  --text-5xl:  3rem;      /* 48 */
+  --text-6xl:  4rem;      /* 64 */
+  --text-7xl:  5.25rem;   /* 84 */
+
+  /* ---- Line height ---- */
+  --leading-none:    1;
+  --leading-tight:   1.08;
+  --leading-snug:    1.2;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.65;
+
+  /* ---- Letter spacing ---- */
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.06em;
+  --tracking-wider:   0.16em;  /* eyebrows / labels */
+  --tracking-widest:  0.30em;  /* wordmark, sub-brand tags */
+
+  /* ---- Semantic roles ---- */
+  --display-font:   var(--font-display);
+  --display-weight: var(--weight-medium);
+  --display-tracking: 0.02em;
+
+  --eyebrow-font:     var(--font-sans);
+  --eyebrow-weight:   var(--weight-semibold);
+  --eyebrow-tracking: var(--tracking-wider);
+  --eyebrow-size:     var(--text-sm);
+
+  --heading-font:   var(--font-sans);
+  --heading-weight: var(--weight-bold);
+
+  --body-font:    var(--font-sans);
+  --body-weight:  var(--weight-regular);
+  --body-leading: var(--leading-relaxed);
+}

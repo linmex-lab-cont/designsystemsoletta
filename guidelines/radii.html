@@ -1,0 +1,18 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radii" subtitle="Pills for CTAs, soft radius for cards, sharp for editorial bands" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-sans);background:#fff;padding:24px;display:flex;gap:22px;align-items:flex-end;flex-wrap:wrap}
+  .item{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .box{width:84px;height:60px;background:var(--marine-100);border:1.5px solid var(--marine-500)}
+  .lab{font-size:11px;color:var(--ink-500);letter-spacing:.04em}
+  .v{font-size:10px;color:var(--ink-300)}
+</style></head>
+<body>
+  <div class="item"><div class="box" style="border-radius:0"></div><span class="lab">none</span><span class="v">0 · bands</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><span class="lab">sm</span><span class="v">4px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><span class="lab">md</span><span class="v">8px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><span class="lab">lg</span><span class="v">14px · cards</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><span class="lab">xl</span><span class="v">22px</span></div>
+  <div class="item"><div class="box" style="width:120px;border-radius:var(--radius-pill)"></div><span class="lab">pill</span><span class="v">CTAs</span></div>
+</body></html>

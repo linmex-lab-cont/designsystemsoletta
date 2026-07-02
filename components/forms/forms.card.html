@@ -1,0 +1,49 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Buttons & Inputs" subtitle="Pill CTAs, marine & coral, plus text fields" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;background:var(--gray-50);font-family:var(--font-sans);padding:28px}
+  .wrap{display:flex;flex-direction:column;gap:24px}
+  .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-400);width:100%;margin-bottom:-4px}
+  .forms{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:560px}
+</style></head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { Button, Input } = window.SolettaDesignSystem_19cf15;
+    const Ic = ({n,s=18})=>{const d=lucide.icons[n]||[];return React.createElement('svg',{width:s,height:s,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:2,strokeLinecap:'round',strokeLinejoin:'round'},d.map((c,i)=>React.createElement(c[0],{...c[1],key:i})));};
+    function App(){return (
+      <div className="wrap">
+        <div className="row"><span className="label">Buttons</span>
+          <Button variant="primary">Conoce los lotes</Button>
+          <Button variant="accent" leftIcon={<Ic n="Phone"/>}>Contáctame</Button>
+          <Button variant="outline">Más información</Button>
+          <Button variant="ghost">Descartar</Button>
+          <Button variant="link" rightIcon={<Ic n="ArrowRight"/>}>Ver masterplan</Button>
+        </div>
+        <div className="row"><span className="label">Sizes & disabled</span>
+          <Button variant="primary" size="sm">Pequeño</Button>
+          <Button variant="primary" size="md">Mediano</Button>
+          <Button variant="primary" size="lg">Grande</Button>
+          <Button variant="accent" disabled>No disponible</Button>
+        </div>
+        <div><span className="label">Inputs</span>
+          <div className="forms">
+            <Input label="Nombre" placeholder="Tu nombre completo"/>
+            <Input label="Correo" type="email" placeholder="tu@correo.com" leftIcon={<Ic n="Mail"/>}/>
+            <Input label="Teléfono" placeholder="999 000 0000" hint="Te contactamos en 24 h"/>
+            <Input label="Presupuesto" placeholder="$" error="Campo requerido"/>
+          </div>
+        </div>
+      </div>
+    );}
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body></html>

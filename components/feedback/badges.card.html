@@ -1,0 +1,42 @@
+<!-- @dsCard group="Components" viewport="700x230" name="Badges & Labels" subtitle="Wide-tracked uppercase label pills and tags" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;background:var(--gray-50);font-family:var(--font-sans);padding:28px}
+  .wrap{display:flex;flex-direction:column;gap:22px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .dark{background:var(--marine-900);padding:18px;border-radius:var(--radius-lg)}
+  .label{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-400);width:100%;margin-bottom:-6px}
+</style></head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { Badge } = window.SolettaDesignSystem_19cf15;
+    function App(){return (
+      <div className="wrap">
+        <div className="row"><span className="label">Solid</span>
+          <Badge variant="marine">Plan Inversionista Estratégico</Badge>
+          <Badge variant="marine-deep">Escrituración inmediata</Badge>
+          <Badge variant="coral" size="lg">Solo 35 lotes disponibles</Badge>
+        </div>
+        <div className="row"><span className="label">Quiet & outline</span>
+          <Badge variant="soft">Pueblo Mágico</Badge>
+          <Badge variant="sand">Playa Platino</Badge>
+          <Badge variant="outline">154 m²</Badge>
+          <Badge variant="marine" uppercase={false} pill={false}>24% plusvalía</Badge>
+        </div>
+        <div className="row dark"><span className="label" style={{color:'rgba(255,255,255,.5)'}}>Over photography</span>
+          <Badge variant="outline-light">Sisal · Yucatán</Badge>
+          <Badge variant="coral">Acceso al mar a 90 m</Badge>
+          <Badge variant="outline-light" size="sm">Chicxulub</Badge>
+        </div>
+      </div>
+    );}
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body></html>

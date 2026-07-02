@@ -1,0 +1,44 @@
+<!-- @dsCard group="Brand" viewport="700x440" name="Logo Lockups" subtitle="Official files — primary & secondary at equal prominence, plus isotipo" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-sans)}
+  .lab{position:absolute;top:14px;left:16px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-400)}
+  .dark .lab{color:rgba(255,255,255,.55)}
+  .pair{display:grid;grid-template-columns:1fr 1fr}
+  .cell{position:relative;display:flex;align-items:center;justify-content:center;padding:40px 28px;min-height:200px}
+  .sand{background:var(--sand-50)}
+  .sand2{background:var(--sand-50);border-left:1px solid var(--sand-300)}
+  .trio{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--border-subtle)}
+  .white{background:#fff}
+  .white2{background:#fff;border-left:1px solid var(--border-subtle);border-right:1px solid var(--border-subtle)}
+  .dark{background:var(--marine-900)}
+  .trio .cell{min-height:150px;padding:28px}
+  .marks{display:flex;gap:34px;align-items:center}
+</style></head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { Logo } = window.SolettaDesignSystem_19cf15;
+    const B = "../../assets/logo";
+    function App(){return (
+      <>
+        <div className="pair">
+          <div className="cell sand"><span className="lab">Primary · Logotipo</span><Logo variant="full" color="marine" size={150} assetBase={B}/></div>
+          <div className="cell sand2"><span className="lab">Secondary · Secundario</span><Logo variant="wordmark" color="marine" size={40} assetBase={B}/></div>
+        </div>
+        <div className="trio">
+          <div className="cell white"><span className="lab">On light</span><Logo variant="full" color="black" size={110} assetBase={B}/></div>
+          <div className="cell dark"><span className="lab">On marine</span><Logo variant="full" color="white" size={110} assetBase={B}/></div>
+          <div className="cell white2"><span className="lab">Isotipo</span><div className="marks"><Logo variant="mark" color="marine" size={74} assetBase={B}/><Logo variant="mark" color="coral" size={74} assetBase={B}/></div></div>
+        </div>
+      </>
+    );}
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body></html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Photography" subtitle="Hiperrealismo editorial · luz natural · costa real de Sisal/Chicxulub" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;font-family:var(--font-sans);background:#fff;padding:18px;display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+  .frame{position:relative;border-radius:var(--radius-md);overflow:hidden;height:264px}
+  .frame.tall{grid-row:span 1}
+  .frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .stack{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+  .stack .frame{height:125px}
+  .scrim{position:absolute;inset:0;background:var(--scrim-bottom)}
+  .cap{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:11px}
+</style></head>
+<body>
+  <div class="frame">
+    <img src="../assets/imagery/terrace-sunset.png" alt="">
+    <div class="scrim"></div>
+    <div class="cap">Luz natural · warm · editorial</div>
+  </div>
+  <div class="stack">
+    <div class="frame"><img src="../assets/imagery/masterplan-aerial.png" alt=""><div class="scrim"></div><div class="cap">Costa real · Sisal</div></div>
+    <div class="frame"><img src="../assets/logo/soletta-logotipo-marine.png" alt="" style="object-fit:contain;background:var(--sand-50);padding:10px;box-sizing:border-box"></div>
+  </div>
+</body></html>
