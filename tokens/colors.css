@@ -1,0 +1,93 @@
+/* ============================================================
+   SOLETTA · Color tokens
+   Base: serene sea / sky / horizon / sand.
+   Accent: coral — "el criterio y el valor".
+   Anchored to the official brand guide (Ficha técnica):
+     Marine  #2274A5   Coral #F56B43   Ink #1F2938   Light #EFEFEF
+   Deeper navy sampled from the brand's icon-badge artwork.
+   NOTE: stay far from saturated tourist-brochure turquoise.
+   ============================================================ */
+
+:root {
+  /* ---- Marine (primary) ---- */
+  --marine-900: #11364F;
+  --marine-800: #16486A;
+  --marine-700: #1B5C84;
+  --marine-600: #2274A5; /* PRIMARY — official brand blue */
+  --marine-500: #3E8AB8;
+  --marine-300: #9CC3DC;
+  --marine-100: #DCEAF2;
+  --marine-50:  #EEF5F9;
+
+  /* ---- Coral (accent) ---- */
+  --coral-700: #C9461F;
+  --coral-600: #E2552F;
+  --coral-500: #F56B43; /* ACCENT — official brand coral */
+  --coral-300: #F8A188;
+  --coral-100: #FCDDD2;
+  --coral-50:  #FDEEE8;
+
+  /* ---- Ink & cool neutrals ---- */
+  --ink-900: #1F2938; /* official ink — primary text */
+  --ink-700: #3A4452;
+  --ink-500: #5E6875;
+  --ink-400: #8A929C;
+  --ink-300: #B6BCC4;
+  --gray-200: #D8DBDE;
+  --gray-150: #E4E5E7;
+  --gray-100: #EFEFEF; /* official light gray */
+  --gray-50:  #F6F6F5;
+  --white:    #FFFFFF;
+
+  /* ---- Sand (warm "arena metálica" — premium-racional) ---- */
+  --sand-700: #9A8A6E;
+  --sand-500: #C9BBA3;
+  --sand-300: #E2D9C8;
+  --sand-100: #F2ECE0;
+  --sand-50:  #F8F4EC;
+
+  /* ---- Semantic surfaces ---- */
+  --color-bg:            var(--white);
+  --color-bg-warm:       var(--sand-50);
+  --color-bg-muted:      var(--gray-100);
+  --color-bg-marine:     var(--marine-900);
+  --surface-card:        var(--white);
+  --surface-sand:        var(--sand-50);
+  --surface-marine:      var(--marine-600);
+  --surface-marine-deep: var(--marine-900);
+
+  /* ---- Semantic text ---- */
+  --text-primary:        var(--ink-900);
+  --text-secondary:      var(--ink-500);
+  --text-muted:          var(--ink-400);
+  --text-accent:         var(--coral-500);
+  --text-marine:         var(--marine-600);
+  --text-on-dark:        var(--white);
+  --text-on-dark-muted:  rgba(255, 255, 255, 0.74);
+
+  /* ---- Semantic interactive ---- */
+  --color-primary:        var(--marine-600);
+  --color-primary-hover:  var(--marine-700);
+  --color-primary-press:  var(--marine-800);
+  --color-accent:         var(--coral-500);
+  --color-accent-hover:   var(--coral-600);
+  --color-accent-press:   var(--coral-700);
+
+  /* ---- Borders & lines ---- */
+  --border-subtle:  var(--gray-150);
+  --border-default: var(--gray-200);
+  --border-strong:  var(--ink-300);
+  --border-marine:  var(--marine-600);
+  --focus-ring:     rgba(34, 116, 165, 0.40);
+
+  /* ---- Status (sober, derived from brand hues) ---- */
+  --color-success: #3E8A5B;
+  --color-warning: var(--coral-500);
+  --color-danger:  #C0392B;
+  --color-info:    var(--marine-600);
+
+  /* ---- Image-protection gradients ---- */
+  --scrim-bottom: linear-gradient(to top, rgba(17, 54, 79, 0.78) 0%, rgba(17, 54, 79, 0.30) 38%, rgba(17, 54, 79, 0) 70%); /* @kind color */
+  --scrim-top:    linear-gradient(to bottom, rgba(17, 54, 79, 0.55) 0%, rgba(17, 54, 79, 0) 55%); /* @kind color */
+  --scrim-full:   linear-gradient(to top, rgba(17, 54, 79, 0.62) 0%, rgba(17, 54, 79, 0.18) 55%, rgba(17, 54, 79, 0.06) 100%); /* @kind color */
+}
